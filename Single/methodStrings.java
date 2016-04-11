@@ -2,7 +2,7 @@ public class methodStrings{
 
   public static void main(String args[]){
 
-    String words[]= {"Linux","Unix","OSX","Windows"};
+    String words[] = {"Linux","Unix","OSX","Windows"};
     String s = "findstuffinherefindstuffinhere";
 
       // : loops through a list of words in a sequence
@@ -12,11 +12,11 @@ public class methodStrings{
       for (String compare : words){
           if(compare.startsWith("Li")){
             System.out.println( compare + " Starts with Li");
-          }
+	  }// End If
 
-    System.out.print(s.indexOf("f"));
-    
 
-      }
-  }
+	  System.out.print(s.indexOf("f"));
+
+      } // End For
+  } // End Main
 } //end class
