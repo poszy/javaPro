@@ -1,4 +1,4 @@
-public class ArrayException{
+public class MultiCatch{
 
     public static void main(String args[]){
 	
@@ -7,12 +7,24 @@ public class ArrayException{
 	try{
 	
 	    char[] arr   = hello.toCharArray();
-	    char   lastIndex = arr[arr.length];
+	    char   lastIndex = arr[arr.length-1];
+
+	    // substring index is smaller than .substring
+
+	    String sub = hello.substring(10);
 	
 	}catch(ArrayIndexOutOfBoundsException e){
 	    
 	    e.printStackTrace();
 	    
+	}catch(StringIndexOutOfBoundsException e){
+	    // variable e can be used again because the scope of
+	    // the first e ends with the first catch
+	    System.out.println("String index Problem!!");
+
+	    // pro tip
+	    // Use catch blocks for any exception you think
+	    // your code will generate
 	}
 
 	// This will make an Array out of bound Exception
