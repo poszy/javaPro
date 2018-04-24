@@ -1,7 +1,7 @@
-public interface Sellable{
+public interface Sellable {
 
-  public String description();
-  public int    listPrice();
-  public int    lowestPrice();
+public String description();
+public int    listPrice();
+public int    lowestPrice();
 
 }

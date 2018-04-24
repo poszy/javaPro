@@ -1,7 +1,7 @@
-public interface Transportable{
+public interface Transportable {
 
-  public int weight();
-  public boolean isHazardous();
+public int weight();
+public boolean isHazardous();
 
 
 }

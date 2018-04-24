@@ -1,28 +1,36 @@
-public class Photograph implements Sellable{
+public class Photograph implements Sellable {
 
-  //instance variables
+//instance variables
 
-  private String descript;
-  private int price;
-  private boolean color;
-
-
-  public Photograph(String desc, int p, boolean c){
-
-    descript = desc;
-    price = p;
-    color = c;
-
-  }
+private String descript;
+private int price;
+private boolean color;
 
 
-  public String description(){return descript;}
-  public int listPrice()    {return price;}
-  public int lowestPrice()  {return price/2;}
-  public boolean isColor()  {return color;}
+public Photograph(String desc, int p, boolean c){
+
+        descript = desc;
+        price = p;
+        color = c;
+
+}
 
 
-  // Interface for objects that can be transported
+public String description(){
+        return descript;
+}
+public int listPrice()    {
+        return price;
+}
+public int lowestPrice()  {
+        return price/2;
+}
+public boolean isColor()  {
+        return color;
+}
+
+
+// Interface for objects that can be transported
 
 
 } // End Class  Photograph

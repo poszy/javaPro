@@ -1,24 +1,28 @@
-public class GameEntry{
+public class GameEntry {
 
-  private String name; // name f the person earning this score
+private String name;   // name f the person earning this score
 
-  private int score;
+private int score;
 
-  // Constructs a game enttry with given parameters
+// Constructs a game enttry with given parameters
 
-  public GameEntry(String n, int s){
-    name  = n;
-    score = s;
+public GameEntry(String n, int s){
+        name  = n;
+        score = s;
 
-  } // end Game Entry
+}   // end Game Entry
 
-  public String getName(){return name;}
-  public int getScore(){return score;}
+public String getName(){
+        return name;
+}
+public int getScore(){
+        return score;
+}
 
-  public String toString() {
+public String toString() {
 
-    return"(" + name +", " + score + ")";
+        return "(" + name +", " + score + ")";
 
-  }
+}
 
 }

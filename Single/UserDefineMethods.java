@@ -1,79 +1,79 @@
 import java.util.*;
 
-public class UserDefineMethods{
+public class UserDefineMethods {
 
-    // Global Vars
-    static Scanner in  = new Scanner(System.in);
-    
-    public static void main(String args[]){
-	
-	double total = getTotal();
-	print(total);
+// Global Vars
+static Scanner in  = new Scanner(System.in);
 
-    }//end Main
+public static void main(String args[]){
 
-    public static double getTotal(){
+        double total = getTotal();
+        print(total);
 
-	double total = 0;
-	Boolean moreItems = true;
-	char response;
+}    //end Main
 
-	while(moreItems){
-	    total = total + getItemPrice(getItemName());
-	    System.out.println("More Items? (y/n)");
-	    
-	    response = in.next().charAt(0);
-	  
-	    if(response != 'y' && response != 'Y'){
-		moreItems = false;
-		in.nextLine();
-	 
-	    }// end if
-	
-	} // end while
+public static double getTotal(){
 
-	return total;
+        double total = 0;
+        Boolean moreItems = true;
+        char response;
 
-    }// end getTotal
+        while(moreItems) {
+                total = total + getItemPrice(getItemName());
+                System.out.println("More Items? (y/n)");
 
-    public static String getItemName(){
-	String name;
-	System.out.println(" Enter Item name ");
-	name = in.nextLine();
-	return name;
-   
-    }// end getItemName
+                response = in.next().charAt(0);
 
-    public static double getItemPrice(String value){
-	double price = 0;
-	try{
-	    
-	    System.out.println(" Enter price for " + value + ": " );
-	    price = in.nextDouble();
-	    
-	}catch(Exception e){
-	    
-	    System.out.println(" Invalid data type entered ");
-	    e.printStackTrace();
-	    
-	} // end try catch
-	
-	int quantity = getItemQuantity();
-	return quantity * price; 
-    
-    }// end get ItemPrice
+                if(response != 'y' && response != 'Y') {
+                        moreItems = false;
+                        in.nextLine();
 
-    public static int getItemQuantity(){
+                }// end if
 
-	int quantity = in.nextInt();
-	return quantity;
+        } // end while
 
-    }// end getItemQuantity
+        return total;
 
-    public static void print(double total){
-	
-	System.out.println(total);
+}    // end getTotal
 
-    }
+public static String getItemName(){
+        String name;
+        System.out.println(" Enter Item name ");
+        name = in.nextLine();
+        return name;
+
+}    // end getItemName
+
+public static double getItemPrice(String value){
+        double price = 0;
+        try{
+
+                System.out.println(" Enter price for " + value + ": " );
+                price = in.nextDouble();
+
+        }catch(Exception e) {
+
+                System.out.println(" Invalid data type entered ");
+                e.printStackTrace();
+
+        } // end try catch
+
+        int quantity = getItemQuantity();
+        return quantity * price;
+
+}    // end get ItemPrice
+
+public static int getItemQuantity(){
+
+        int quantity = in.nextInt();
+        return quantity;
+
+}    // end getItemQuantity
+
+public static void print(double total){
+
+        System.out.println(total);
+
+}
 
 }// End class
