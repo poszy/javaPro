@@ -29,6 +29,7 @@ public static void main (String[] args) {
         System.out.println(map.get("Father"));
 
         System.out.println(map.toString());
+        Sys
 
 
         map.remove("Mother");
